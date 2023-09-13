@@ -16,7 +16,19 @@ for (a = 0 ; a < 10 ; a++)
 for (b = 0 ; b < 10 ; b++)
 {
 result = a * b;
+if (b == 0)
+{
+printf("%d, ", result);
+}
+else
+{
+printf("%2d, ", result);
+if (j != 9)
+{
+printf(", ");
 }
 }
-printf("%d", result);
+}
+printf("\n");
+}
 }
