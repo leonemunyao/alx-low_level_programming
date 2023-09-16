@@ -2,6 +2,8 @@
 
 /**
 * main - causes an infinite loop
+* @\o/: the output
+* :(: colon and bracket
 * Return: 0
 */
 
