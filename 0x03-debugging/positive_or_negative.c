@@ -15,6 +15,4 @@ else
 {
 printf("%d: is negative\n", i);
 }
-printf("\n");
-return (0);
 }
