@@ -5,7 +5,7 @@
  * *_strcpy - copies the string pointed to by src
  * @dest: the destination
  * @src: the source
- * Return: Always 0.
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -13,7 +13,7 @@ int m;
 for (m = 0 ; src[m] != '\0' ; m++)
 {
 dest[m] = src[m];
-dest[m] = '\0';
 }
+dest[m] = '\0';
 return (dest);
 }
