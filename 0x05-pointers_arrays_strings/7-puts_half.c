@@ -14,10 +14,10 @@ for (a = 0 ; str[a] != '\0' ; a++)
 {
 result++;
 b = (result - 1) / 2;
+}
 for (a = b + 1 ; str[a] != '\0' ; a++)
 {
 _putchar(str[a]);
-}
 }
 _putchar('\n');
 }
