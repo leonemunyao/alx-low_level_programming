@@ -19,5 +19,4 @@ for (a = b + 1 ; str[a] != '\0' ; a++)
 {
 _putchar(str[a]);
 }
-_putchar('\n');
 }
