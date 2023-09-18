@@ -20,5 +20,4 @@ _putchar(str[a]);
 }
 }
 _putchar('\n');
-return (0);
 }
