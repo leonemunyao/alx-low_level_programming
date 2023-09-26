@@ -5,7 +5,8 @@
  * @s: the string
  * @accept: source of bytes
  * Return: Always 0
- */unsigned int _strspn(char *s, char *accept)
+ */
+unsigned int _strspn(char *s, char *accept)
 {
 unsigned int k;
 int l;
