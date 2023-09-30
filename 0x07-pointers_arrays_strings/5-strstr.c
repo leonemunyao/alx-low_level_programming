@@ -6,4 +6,19 @@
  * @haystack: the string
  * Return: Always 0
  */
-
+char *_strstr(char *haystack, char *needle)
+{
+int j;
+while (*haystack)
+{
+for (j = 0 ; needle[j] ; j++)
+{
+if (*haystack == needle[j])
+{
+return (haystack);
+}
+}
+haystack++;
+}
+return ('\0');
+}

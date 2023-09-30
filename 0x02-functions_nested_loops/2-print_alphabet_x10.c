@@ -1,22 +1,44 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - printing the alphabets
+ * _putchar - writes a character to the standard output
+ * @c: The character to print
  *
- * Return: Always 0
+ * Return: On success 1. On error, -1 is returned.
+ */
+void _putchar(char c)
+{
+write(1, &c, 1);
+}
+
+/**
+ * print_alphabet_x10 - prints the alphabet in lowercase 10 times
  */
 
 void print_alphabet_x10(void)
 {
-int a;
-int b;
+char letter = 'a';
 
-for (a = 0 ; a <= 10 ; a++)
+for (int i = 0; i < 10; i++)
 {
-for (b = 'a' ; b <= 'z' ; b++)
+for (int j = 0; j < 26; j++)
 {
-_putchar(b);
+_putchar(letter);
+letter++;
+}
 _putchar('\n');
+letter = 'a';
 }
 }
+
+/**
+ * main - entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+print_alphabet_x10();
+return (0);
 }
+
