@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stdlib.h"
 
 /**
  * _strdup - returns a pointer
@@ -20,7 +21,7 @@ for (j = 0 ; str[j] != '\0' ; j++)
 {
 count++;
 }
-m = malloc(sizeof(char) * count + 1);
+m = (char *)malloc(sizeof(char) * count + 1);
 if (m == NULL)
 {
 return (NULL);
@@ -29,5 +30,5 @@ for (j = 0 ; str[j] != '\0' ; j++)
 {
 m[j] = str[j];
 }
-return (0);
+return (m);
 }
