@@ -9,6 +9,8 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
+hash_table_t *hash_table;
+unsigned long int i;
 /* Check if the size is a power of 2*/
 if (size & (size - 1))
 {
@@ -22,30 +24,30 @@ size++;
 }
 
 /*Allocate memory for the hashtable*/
-hash_table_t *hashtable = malloc(sizeof(hash_table_t));
-if (!hashtable)
+hash_table = malloc(sizeof(hash_table_t));
+if (!hash_table)
 {
 return (NULL);
 }
 
 /*Allocate memory for the array*/
-hashtable->array = malloc(size *sizeof(hash_node_t *));
-if (!hashtable->array)
+hash_table->array = malloc(size *sizeof(hash_node_t *));
+if (!hash_table->array)
 {
-free(hashtable);
+free(hash_table);
 return (NULL);
 }
 
 /*Initialize the array*/
-for (unsigned long int i = 0; i < size; i++)
+for (i = 0; i < size; i++)
 {
-hashtable->array[i] = NULL;
+hash_table->array[i] = NULL;
 }
 
 /*Set the size of the array*/
-hashtable->size = size;
+hash_table->size = size;
 
 /*Initialize the count of entries in the hash table*/
-hashtable->count = 0;
-return (hashtable);
+hash_table->count = 0;
+return (hash_table);
 }
