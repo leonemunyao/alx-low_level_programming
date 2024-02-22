@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Island Perimeter"""
 
+
 def island_perimeter(grid):
     """Return the perimeter of an island in a grid."""
     width = len(grid[0])
@@ -12,8 +13,8 @@ def island_perimeter(grid):
         for k in range(width):
             if grid[j][k] == 1:
                 size += 1
-                if ( k > 0 and grid[j][k-1] == 1 ):
+                if (k > 0 and grid[j][k-1] == 1):
                     edges += 1
-                if ( j > 0 and  grid[j-1][k] == 1 ):
+                if (j > 0 and grid[j-1][k] == 1):
                     edges += 1
     return size * 4 - edges * 2
